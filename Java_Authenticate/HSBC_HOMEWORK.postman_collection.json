@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "298dca8a-69cc-4018-9d2a-fb2e17e2f9b3",
+		"name": "HSBC_HOMEWORK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "添加用户",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "lixiaomiao",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除用户",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "lixiaomiao",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/user/deleteUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"user",
+						"deleteUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "添加角色",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "roleName",
+							"value": "software-lookup",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/role/addRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"role",
+						"addRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "删除角色",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "roleName",
+							"value": "software-lookup",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/role/deleteRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"role",
+						"deleteRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "给用户添加角色",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "lixiaomiao",
+							"type": "default"
+						},
+						{
+							"key": "roleName",
+							"value": "software-lookup",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/auth/addRoleToUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"auth",
+						"addRoleToUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "lixiaomiao",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/auth/getTokenByPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"auth",
+						"getTokenByPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token失效",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "PwBFqtGokkcmmxRO",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/auth/invalidateToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"auth",
+						"invalidateToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "验证用户",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "roleName",
+							"value": "device",
+							"type": "default"
+						},
+						{
+							"key": "token",
+							"value": "PwBFqtGokkcmmxRO",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/auth/checkRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"auth",
+						"checkRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "根据token获取角色列表",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userName",
+							"value": "lxy",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "j45u94idOM5sg1q4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate/mgnt/auth/getRolesByToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate",
+						"mgnt",
+						"auth",
+						"getRolesByToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
